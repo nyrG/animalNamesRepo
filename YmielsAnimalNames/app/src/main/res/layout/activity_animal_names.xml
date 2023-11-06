@@ -13,10 +13,14 @@
 
     <Button
         android:id="@+id/blockButton"
-        android:text="Manage Block Animals"
+        android:text="@string/manage_block_animals"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_margin="34dp" />
+        tools:ignore="VisualLintButtonSize"
+        android:layout_marginTop="34dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="34dp" />
 
 </RelativeLayout>

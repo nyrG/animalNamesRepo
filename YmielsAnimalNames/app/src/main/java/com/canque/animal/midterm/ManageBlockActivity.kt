@@ -21,7 +21,7 @@ class ManageBlockActivity : AppCompatActivity() {
         //Initializing SharedPreferences
         val sharedPref = SharedPref(this)
         //Retrieving List of Animals
-        var animalList = sharedPref.getAnimalList()
+        val animalList = sharedPref.getAnimalList()
         val blockedAnimalList = animalList.filter { it.isBlocked }.toMutableList()
 
         // Check if the blockedAnimalList is empty
@@ -33,21 +33,7 @@ class ManageBlockActivity : AppCompatActivity() {
             binding.noBlockedAnimalsMessage.visibility = View.GONE
         }
 
-        adapter = BlockAdapter(this, blockedAnimalList) { position ->
-            // Implement the logic for unblocking the animal here
-            Log.d("Debug", "Unblocking animal at position: $position")
-            val unblockedAnimal = blockedAnimalList[position]
-            // Assuming that you want to unblock the animal, so set isBlocked to false
-            unblockedAnimal.isBlocked = false
-            // Update the list and notify the adapter
-            blockedAnimalList.removeAt(position)
-            adapter.notifyItemRemoved(position)
-
-            // Optionally, save the updated list to SharedPreferences or any other data storage
-            sharedPref.saveAnimalList(animalList)
-        }
-
-        adapter.notifyDataSetChanged()
+        adapter = BlockAdapter(blockedAnimalList)
 
         Log.d("Debug", "blocked animalList contents: $animalList")
         Log.d("Debug", "REAL blocked animalList contents: $blockedAnimalList [Size of blockedAnimalList: ${blockedAnimalList.size}]")

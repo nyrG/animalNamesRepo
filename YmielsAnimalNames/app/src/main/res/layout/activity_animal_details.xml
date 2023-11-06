@@ -34,10 +34,14 @@
 
     <Button
         android:id="@+id/blockButton"
-        android:text="Block Animal"
+        android:text="@string/block_animal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_margin="16dp" />
+        tools:ignore="VisualLintButtonSize"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp" />
 
 </RelativeLayout>

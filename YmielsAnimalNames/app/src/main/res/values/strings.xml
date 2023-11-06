@@ -3,4 +3,8 @@
     <string name="manage_block_animals">Manage Block Animals</string>
     <string name="animal_names_from_a_to_z">Animal names from A to Z</string>
     <string name="animal_s_details">Animal\'s Details</string>
+    <string name="block_animal">Block Animal</string>
+    <string name="there_are_no_blocked_animals_yet">There are no blocked animals yet.</string>
+    <string name="test">Test</string>
+    <string name="unblock">Unblock</string>
 </resources>

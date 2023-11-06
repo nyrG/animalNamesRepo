@@ -1,6 +1,5 @@
 package com.canque.animal.midterm.adapters
 
-import android.app.Activity
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -9,13 +8,10 @@ import com.canque.animal.midterm.databinding.BlockedItemBinding
 import com.canque.animal.midterm.models.Animal
 
 class BlockAdapter(
-    private val activity: Activity,
     private val animals: MutableList<Animal>,
-    private val onItemClick: (Int) -> Unit,
 ): RecyclerView.Adapter<BlockAdapter.BlockViewHolder>() {
 
     class BlockViewHolder(
-        private val activity: Activity,
         private val binding: BlockedItemBinding,
         private val onItemClick: (Int) -> Unit
     ): RecyclerView.ViewHolder(binding.root) {
@@ -49,7 +45,7 @@ class BlockAdapter(
             // You can remove the animal from the list or perform other actions
             // based on the position (index) of the clicked item
         }
-        return BlockViewHolder(activity, binding, onItemClick)
+        return BlockViewHolder(binding, onItemClick)
     }
 
     override fun getItemCount() = animals.size

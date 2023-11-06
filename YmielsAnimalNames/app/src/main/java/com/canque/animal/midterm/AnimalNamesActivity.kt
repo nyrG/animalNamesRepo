@@ -33,11 +33,31 @@ class AnimalNamesActivity : AppCompatActivity() {
             // Initialize the list with default animals for first run
             val defaultAnimals = mutableListOf(
                 Animal("Antelope", "A deer with cool horns."),
+                Animal("Bat", "Flies at night."),
                 Animal("Cat", "Likes catnip."),
-                Animal("Bear", "Likes honey."),
-                Animal("Lion", "The king of the jungle."),
+                Animal("Dog", "Man's best friend."),
                 Animal("Elephant", "The largest land animal."),
-                // Add more default animals here
+                Animal("Fox", "Cunning and sly."),
+                Animal("Giraffe", "Has a long neck."),
+                Animal("Horse", "Used for transportation."),
+                Animal("Iguana", "A reptile with scales."),
+                Animal("Jaguar", "A spotted big cat."),
+                Animal("Kangaroo", "Hops around."),
+                Animal("Lion", "The king of the jungle."),
+                Animal("Monkey", "Swings from trees."),
+                Animal("Nightingale", "Sings beautifully."),
+                Animal("Ostrich", "Tall and flightless."),
+                Animal("Panda", "Eats bamboo."),
+                Animal("Quokka", "Smiling marsupial."),
+                Animal("Raccoon", "Loves trash cans."),
+                Animal("Squirrel", "Collects nuts."),
+                Animal("Tiger", "Striped and fierce."),
+                Animal("Uakari", "Bright red face."),
+                Animal("Vulture", "Scavenger bird."),
+                Animal("Walrus", "Tusked marine mammal."),
+                Animal("X-ray Tetra", "Small fish."),
+                Animal("Yak", "Himalayan livestock."),
+                Animal("Zebra", "Striped black and white.")
             )
             animalList.addAll(defaultAnimals)
 
@@ -51,7 +71,6 @@ class AnimalNamesActivity : AppCompatActivity() {
         unblockedAnimalList.sortBy { it.name }
 
         adapter = AnimalAdapter(this, unblockedAnimalList)
-        adapter.notifyDataSetChanged()
 
         Log.d("Debug", "animalList contents: $animalList")
         binding.animalList.layoutManager = LinearLayoutManager(this)
@@ -64,6 +83,7 @@ class AnimalNamesActivity : AppCompatActivity() {
         }
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
@@ -80,7 +100,6 @@ class AnimalNamesActivity : AppCompatActivity() {
 
                 // Update the RecyclerView to reflect the changes
                 // YourAdapter.notifyDataSetChanged() or similar method
-                adapter.notifyDataSetChanged()
             }
         }
         Log.d("Debug", "Updated animalList: $animalList")

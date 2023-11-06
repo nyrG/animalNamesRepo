@@ -24,7 +24,7 @@ class AnimalDetailsActivity : AppCompatActivity() {
         //Initializing SharedPreferences
         val sharedPref = SharedPref(this)
         //Retrieving List of Animals
-        var animalList = sharedPref.getAnimalList()
+        val animalList = sharedPref.getAnimalList()
         //Populating List of Animals
 
         val name = intent.getStringExtra(Constants.PARAM_NAME)

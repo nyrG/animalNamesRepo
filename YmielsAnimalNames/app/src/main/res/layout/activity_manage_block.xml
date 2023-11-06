@@ -17,7 +17,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:text="There are no blocked animals yet."
+        android:text="@string/there_are_no_blocked_animals_yet"
         android:visibility="gone"
         android:textStyle="bold"
         android:textSize="20sp" />
